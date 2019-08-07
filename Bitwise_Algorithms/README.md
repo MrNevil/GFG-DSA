@@ -129,7 +129,8 @@ Below are some problems which can be solved very easily using some of the basic 
     Bitwise Solution: If we subtract a number which is a power of 2 1 then all of it's unset bits after the only set bit 
     become set; and the set bit become unset.
 
-    For example, consider 4 ( Binary representation: 100) and 16(Binary representation: 10000), we get following after subtracting 1 from them:
+    For example, consider 4 ( Binary representation: 100) and 16(Binary representation: 10000), we get following 
+    after subtracting 1 from them:
 
     3 –> 011
     15 –> 01111
@@ -157,9 +158,11 @@ Below are some problems which can be solved very easily using some of the basic 
     Bitwise Solution: The most-significant bit in binary representation of a number is the highest ordered bit, 
     that is it is the bit-position with highest value.
 
-    One of the solution is first find the bit-position corresponding to the MSB in the given number, this can be done by calculating logarithm base 2 of the given number, i.e., log2(N) gives the position of the MSB in N.
+    One of the solution is first find the bit-position corresponding to the MSB in the given number, this can be 
+    done by calculating logarithm base 2 of the given number, i.e., log2(N) gives the position of the MSB in N.
 
-    Once, we know the position of the MSB, calculate the value corresponding to it by raising 2 by the power of calculated position. That is, value = 2log2(N).
+    Once, we know the position of the MSB, calculate the value corresponding to it by raising 2 by the power of 
+    calculated position. That is, value = 2log2(N).
     
 ```  
 3. Problem 3: Given a number N, the task is to find the XOR of all numbers from 1 to N.
