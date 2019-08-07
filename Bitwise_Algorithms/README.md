@@ -36,29 +36,28 @@ if x is odd, otherwise the value would be zero.
 Let's look at some of the useful tactics of the Bitwise Operators which can be helpful in solving a lot of problems really easily and quickly.
 
 1. How to set a bit in the number 'num' : If we want to set a bit at nth position in number 'num' ,it can be done using 'OR' operator( | ).  
-+ First we left shift '1' to n position via (1 << n).  
-+ Then, use 'OR' operator to set bit at that position.'OR' operator is used because it will set the bit even if the bit is unset previously in binary representation of number 'num'.
+   - First we left shift '1' to n position via (1 << n).  
+   - Then, use 'OR' operator to set bit at that position.'OR' operator is used because it will set the bit even if the bit is unset previously in binary representation of number 'num'.
 
-2. How to unset/clear a bit at n'th position in the number 'num' :  
-Suppose we want to unset a bit at nth position in number 'num' then we have to do this with the help of 'AND' (&) operator.    
-+ First we left shift '1' to n position via (1 << n) than we use bitwise NOT operator '~' to unset this shifted '1'.    
-+ Now after clearing this left shifted '1' i.e making it to '0' we will 'AND'(&) with the number 'num' that will unset bit at nth position position.  
+2. How to unset/clear a bit at n'th position in the number 'num': Suppose we want to unset a bit at nth position in number 'num' then we have to do this with the help of 'AND' (&) operator.  
+   - First we left shift '1' to n position via (1 << n) than we use bitwise NOT operator '~' to unset this shifted '1'.    
+   - Now after clearing this left shifted '1' i.e making it to '0' we will 'AND'(&) with the number 'num' that will unset bit at nth position position.  
   
 3. Toggling a bit at nth position :  
-+ Toggling means to turn bit 'on'(1) if it was 'off'(0) and to turn 'off'(0) if it was 'on'(1) previously.We will be using 'XOR' operator here which is this '^'. The reason behind 'XOR' operator is because of its properties.  
+   - Toggling means to turn bit 'on'(1) if it was 'off'(0) and to turn 'off'(0) if it was 'on'(1) previously.We will be using 'XOR' operator here which is this '^'. The reason behind 'XOR' operator is because of its properties.  
         
 4. Properties of 'XOR' operator.  
-+ 1^1 = 0  
-+ 0^0 = 0  
-+ 1^0 = 1  
-+ 0^1 = 1
+   - 1^1 = 0  
+   - 0^0 = 0  
+   - 1^0 = 1  
+   - 0^1 = 1
         
 5. If two bits are different then 'XOR' operator returns a set bit(1) else it returns an unset bit(0).  
 
 6. Checking if bit at nth position is set or unset:
-+ It is quite easily doable using 'AND' operator.  
-  - a. Left shift '1' to given position and then 'AND'('&').
-    If the result of the AND operation is 1 then the bit at nth position is set otherwise it is unset.  
+   - It is quite easily doable using 'AND' operator.  
+     - Left shift '1' to given position and then 'AND'('&').  
+     If the result of the AND operation is 1 then the bit at nth position is set otherwise it is unset.  
     
 7. Divide by 2:  
   x = x >> 1;  
