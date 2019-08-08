@@ -7,7 +7,7 @@ For example: To check if a number is even or odd. This can be easily done by usi
 If the last bit of the operator is set than it is ODD otherwise it is EVEN. Therefore, if num & 1 not equals to zero than 
 num is ODD otherwise it is EVEN.
 
-### Bitwise Operators:  
+## Bitwise Operators:  
 The operators that works at Bit level are called bitwise operators. In general there are six types of Bitwise Operators as 
 described below:
 
@@ -24,7 +24,7 @@ to shift.
 + ~ (bitwise NOT) Takes one number and inverts all bits of it. Suppose A = 5, therefore ~A = 2.
   
   
-### Important Facts about Bitwise Operators:  
+## Important Facts about Bitwise Operators:  
 + The left shift and right shift operators cannot be used with negative numbers.  
 + The bitwise XOR operator is the most useful operator from technical interview perspective. We will see some very useful 
 applications of the XOR operator later in the course.  
