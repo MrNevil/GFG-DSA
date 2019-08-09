@@ -129,7 +129,7 @@ A loop or recursion that runs a constant number of times is also considered as O
 
    }
 ```  
-3. O(n^c): Time complexity of nested loops is equal to the number of times the innermost statement is executed. For example the following sample loops have O(n2) time complexity  
+3. O(n^c): Time complexity of nested loops is equal to the number of times the innermost statement is executed. For example the following sample loops have O(n^2) time complexity  
   
 ```
    for (int i = 1; i <=n; i += c) {
