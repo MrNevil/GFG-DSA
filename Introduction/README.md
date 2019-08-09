@@ -98,7 +98,7 @@ Best Case Analysis (Bogus) : In the best case analysis, we calculate lower bound
 We have already discussed Asymptotic Analysis,  Worst, Average and Best Cases  and Asymptotic Notations. In this post, analysis of iterative programs with simple examples is discussed.  
 
 1. O(1): Time complexity of a function (or set of statements) is considered as O(1) if it doesn't contain loop, recursion and call to any other non-constant time function.  
-   `// set of non-recursive and non-loop statements`
+   `// set of non-recursive and non-loop statements`  
 For example swap() function has O(1) time complexity.  
 A loop or recursion that runs a constant number of times is also considered as O(1). For example the following loop is O(1).   
 ```
