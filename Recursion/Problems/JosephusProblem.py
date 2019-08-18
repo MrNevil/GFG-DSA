@@ -1,5 +1,5 @@
 {
-1import math
+import math
 //Position this line where user code will be pasted.
     
 def main():
