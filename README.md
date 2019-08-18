@@ -5,7 +5,7 @@ DSA-Self Paced With Doubt Assistance
 This is a course designed by geeksforgeeks for Data Structures and Algorithms which covers below contents:  
 + [Introduction - Analysis of Algorithms( Iterative and recursive).](Introduction)
 + [Mathematics](Mathematics) 
-+ [Bit Magic](Bitwise Algorithms)
++ [Bit Magic](Bitwise_Algorithms)
 + [Recursion](Recursion) 
 + Arrays.  
 + Searching.  
