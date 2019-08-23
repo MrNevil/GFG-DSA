@@ -215,3 +215,216 @@ int factTR(int N, int a)
     return factTR(N-1, N*a); 
 } 
 ```
+
+## Maximum number of pieces of a rope problem using Recursion:  
+
+Problem: Given a rope of length n, and three-piece lengths a, b and c. We need to find the maximum number of pieces we can make of the rope such that the length of every piece is in {a, b, c}.  
+
+```
+Examples : 
+Input : n = 5, a = 1, b = 2, c = 3
+Output : 5
+We make 5 pieces each of length 1.
+
+Input : n = 23, a = 11, b = 9, c = 12
+Output : 2
+We make 2 pieces lengths 11 and 12.
+```
+The idea is to consider every possibility using recursion. We consider all three choices for the first cut. Recursively compute number of pieces for every choice. If none of the choices lead to a solution, we return -1. Otherwise, we return the maximum.  
+
+C++ Code:  
+```
+// CPP program to find maximum number of
+// pieces of a rope
+#include <bits/stdc++.h>
+using namespace std;
+int maxCuts(int n, int a, int b, int c)
+{
+    if (n < 0)
+        return -1;
+    if (n == 0)
+        return 0;
+    int res = max({ maxCuts(n - a, a, b, c),
+                    maxCuts(n - b, a, b, c),
+                    maxCuts(n - c, a, b, c) });
+    if (res == -1)
+        return -1;
+    else
+        return res + 1;
+}
+
+int main()
+{
+    cout << maxCuts(23, 11, 9, 12);
+    return 0;
+}
+```
+Java Code:  
+```
+import java.io.*;
+
+public class GFG {
+
+    static int maxCuts(int n, int a, int b, int c)
+    {
+        if (n < 0)
+            return -1;
+        if (n == 0)
+            return 0;
+        int res = Math.max(maxCuts(n - a, a, b, c),
+                    Math.max(maxCuts(n - b, a, b, c),
+                           maxCuts(n - c, a, b, c)));
+        if (res == -1)
+            return -1;
+        else
+            return res + 1;
+    }
+
+    public static void main(String[] args)
+    {
+        int n = 23, a = 12, b = 9, c = 11;
+        System.out.println(maxCuts(n, a, b, c));
+    }
+}
+```
+For n = 23, we make three recursive calls for 23-9, 23-11 and 23-12 which are for 14, 12 and 11 respectively.  
+
+Each of these 3 makes three recursive calls. 14 makes three recursive calls for 14-9, 14-11 and 14-12.  
+
+Similarly, 12 and 11 make three recursive calls. This keeps on going until we reach either 0 or negative value.  
+
+```
+                                     23
+                /                    |              \
+             14                      12             11
+           /     |     \           /  |   \         / | \
+         5      3       2         4   1   0       2  0  -1
+      /|\       /|\    /|\       /|\ /|\         /|\ 
+    All -ve  All -ve  All-ve     All -ve         All -ve
+
+-ve means negative
+```
+Note that all values at leaves are negative and they will return -1. So, parents of all -ve will return -1. So you get -1 from the first recursive call for 14. From second and third recursive calls you get 1. You add 1 to it and return 2.  
+
+## Subset Generation Problem:  
+
+Given a set represented as string, write a recursive code to print all subsets of it. The subsets can be printed in any order.  
+```
+Examples:
+Input :  set = "abc"
+Output : "". "a", "b", "c", "ab", "ac", "bc", "abc"
+
+Input : set = "abcd"
+Output : "" "a" "ab" "abc" "abcd" "abd" "ac" "acd"
+         "ad" "b" "bc" "bcd" "bd" "c" "cd" "d"
+```
+
+The idea is to consider two cases for every character. (i) Consider current character as part of current subset (ii) Do not consider current character as part of current subset.  
+
+C++ Code:  
+```
+// CPP program to generate power set
+#include <bits/stdc++.h>
+using namespace std;
+
+// str : Stores input string
+// curr : Stores current subset
+// index : Index in current subset, curr
+void powerSet(string str, int index = 0,
+              string curr = "")
+{
+    int n = str.length();
+
+    // base case
+    if (index == n) {
+        cout << curr << endl;
+        return;
+    }
+
+    // Two cases for every character
+    // (i) We consider the character
+    // as part of current subset
+    // (ii) We do not consider current
+    // character as part of current
+    // subset
+    powerSet(str, index + 1, curr + str[index]);
+    powerSet(str, index + 1, curr);
+}
+
+// Driver code
+int main()
+{
+    string str = "abc";
+    powerSet(str);
+    return 0;
+}
+```
+
+Java Code:  
+```
+// Java program to generate power set
+class GFG {
+
+// str : Stores input string 
+// curr : Stores current subset 
+// index : Index in current subset, curr 
+static void powerSet(String str, int index, 
+            String curr) 
+    
+{ 
+    int n = str.length(); 
+
+    // base case 
+    if (index == n)
+    { 
+        System.out.println(curr);
+        return; 
+    } 
+
+    // Two cases for every character 
+    // (i) We consider the character 
+    // as part of current subset 
+    // (ii) We do not consider current 
+    // character as part of current 
+    // subset 
+    powerSet(str, index + 1, curr + str.charAt(index)); 
+    powerSet(str, index + 1, curr);
+} 
+
+// Driver code 
+public static void main(String[] args) 
+{
+    String str = "abc"; 
+        int index = 0;
+        String curr="";
+    powerSet(str,index,curr); 
+
+    }
+}
+```
+Output:  
+```
+abc
+ab
+ac
+a
+bc
+b
+c
+```
+Let us understand the recursion with an example "abc". Every node in below tree represents string curr.  
+```
+                  curr=""
+               /         \
+            "a"             ""
+           /   \           /    \
+        "ab"    "a"       "b"    ""
+       /  \     /  \     /  \    / \
+   "abc" "ab" "ac" "a" "bc" "b" "c"  ""
+```
+
+At root, index = 0.
+At next level of tree index = 1
+At third level, index = 2
+At fourth level index = 3 (becomes equal to string length), so we print the subset.
+
