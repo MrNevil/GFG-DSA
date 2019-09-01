@@ -1,4 +1,5 @@
-{
+###################### TIME LIMIT EXCEEDED #####################
+
 # Initial Template for Python 3
 import math
 def main():
