@@ -1,4 +1,4 @@
-# Theory on Arrays:  
+# Introduction to Arrays:  
   
 An array is a collection of items of same data type stored at contiguous memory locations. This makes it easier to calculate the position of each element by simply adding an offset to a base value, i.e., the memory location of the first element of the array (generally denoted by the name of the array).  
 
@@ -26,3 +26,52 @@ by brackets [ and ].
 Below image shows an array arr[] of size 5:  
 
 ![Array-2](https://github.com/absognety/DSA-GeeksClasses/blob/master/Arrays/Array-2.jpg "Array 2")  
+
+## Advantages of using arrays:  
++ Arrays allow random access of elements. This makes accessing elements by position faster.  
++ Arrays have better cache locality that can make a pretty big difference in performance.  
+
+```
+Examples:
+// A character array in C/C++/Java
+
+char arr1[] = {'g', 'e', 'e', 'k', 's'};
+
+
+
+// An Integer array in C/C++/Java
+
+int arr2[] = {10, 20, 30, 40, 50};
+
+
+
+// Item at i'th index in array is typically accessed
+
+// as "arr[i]".  For example arr1[0] gives us 'g'
+
+// and arr2[3] gives us 40.
+```  
+## Searching in an Array
+
+Searching an element in an array means to check if a given element is present in an array or not. This can be done by accessing elements of the array one by one starting from the first element and checking if any of the element matches with the given element.  
+
+We can use loops to perform the above operation of array traversal and access the elements using indexes.  
+
+Suppose the array is named arr[] with size N and the element to be searched is referred as key. Below is the algorithm to perform to the search operation in the given array.  
+
+```
+for(i = 0; i < N; i++)
+{
+    if(arr[i] == key)
+    { 
+        print "Element Found";
+    }
+    else
+    {
+        print "Element not Found";
+    }
+}
+```
+**Time Complexity** of this search operation will be O(N) in the worst case as we are checking every element of the array from 1st to last, so the number of operations is N.  
+
+# Insertion and Deletion in Arrays:  
