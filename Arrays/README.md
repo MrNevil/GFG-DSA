@@ -6,7 +6,7 @@ For simplicity, we can think of an array a fleet of stairs where on each step is
 
 **Remember:** “Location of next index depends on the data type we use”.  
 
-![Array-1](https://github.com/absognety/DSA-GeeksClasses/blob/master/Arrays/array-1.png "Array 1")
+![Array-1](https://github.com/absognety/DSA-GeeksClasses/blob/master/Arrays/array-1.png "Array 1")  
 
 The above image can be looked as a top-level view of a staircase where you are at the base of staircase. Each element can be uniquely identified by their index in the array (in a similar way as you could identify your friends by the step on which they were on in the above example).  
 
@@ -24,3 +24,5 @@ by brackets [ and ].
 **Accessing array elements:** Arrays allows to access elements randomly. Elements in an array can be accessed using indexes. Suppose an array named arr stores N elements. Indexes in an array are in the range of 0 to N-1, where the first element is present at 0-th index and consecutive elements are placed at consecutive indexes. Element present at ith index in the array arr[] can be accessed as arr[i].  
 
 Below image shows an array arr[] of size 5:  
+
+![Array-2](https://github.com/absognety/DSA-GeeksClasses/blob/master/Arrays/Array-2.jpg "Array 2")  
