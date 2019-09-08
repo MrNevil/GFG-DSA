@@ -8,7 +8,7 @@ This is a course designed by geeksforgeeks for Data Structures and Algorithms wh
 + [Bit Magic](Bitwise_Algorithms)
 + [Recursion](Recursion) 
 + [Arrays](Arrays)  
-+ Searching.  
++ [Searching](Searching)  
 + Sorting  
 + Matrix
 + Hashing
