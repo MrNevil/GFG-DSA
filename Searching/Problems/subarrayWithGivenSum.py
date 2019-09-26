@@ -1,3 +1,4 @@
+# Naive Solution O(n*n) #
 {
 #Initial Template for Python 3
 import math
