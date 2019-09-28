@@ -132,3 +132,16 @@ int binarySearch(int arr[], int l, int r, int x)
 }
 ```  
 **Time Complexity:** O(Log N), where N is the number of elements in the array.  
+
+# Ternary Search:  
+  
+**Ternary Search** is a Divide and Conquer Algorithm used to perform search operation in a sorted array. This algorithm is similar to the Binary Search algorithm but rather than dividing the array into two parts, it divides the array into three equal parts.
+
+In this algorithm, the given array is divided into three parts and the key (element to be searched) is compared to find the part in which it lies and that part is further divided into three parts.
+
+We can divide the array into three parts by taking mid1 and mid2 which can be calculated as shown below. Initially, l and r will be equal to 0 and N-1 respectively, where N is the length of the array.
+
+```
+mid1 = l + (r-l)/3
+mid2 = r – (r-l)/3
+```  
