@@ -9,7 +9,7 @@ This is a course designed by geeksforgeeks for Data Structures and Algorithms wh
 + [Recursion](Recursion) 
 + [Arrays](Arrays)  
 + [Searching](Searching)  
-+ Sorting  
++ [Sorting](Sorting)  
 + Matrix
 + Hashing
 + Strings
