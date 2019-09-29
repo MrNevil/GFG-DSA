@@ -600,3 +600,93 @@ g found at index = 1
 Important Points:  
 + If input list is not sorted, the results are undefined.  
 + If there are duplicates, there is no guarantee which one will be found.  
+
+## Collections.binarySearch()  
+The Collections.binarySearch() method is a Collections class method in Java that returns position of an object in a sorted list.  
+
+Declaration:  
+```
+// Returns index of key in sorted list sorted in
+// ascending order
+public static int binarySearch(List slist, T key)
+
+// Returns index of key in sorted list sorted in
+// order defined by Comparator c.
+public static int binarySearch(List slist, T key, Comparator c)
+
+If key is not present, the it returns "(-(insertion point) - 1)". 
+The insertion point is defined as the point at which the key 
+would be inserted into the list.  
+```  
+The method throws **ClassCastException** if elements of list are not comparable using the specified comparator, or the search key is not comparable with the elements.
+
+Searching an int key in a list sorted in ascending order:  
+```
+
+// Java program to demonstrate working of Collections.
+// binarySearch()
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class GFG
+{
+    public static void main(String[] args)
+    {
+        List al = new ArrayList();
+        al.add(1);
+        al.add(2);
+        al.add(3);
+        al.add(10);
+        al.add(20);
+
+        // 10 is present at index 3.
+        int index = Collections.binarySearch(al, 10);
+        System.out.println(index);
+
+        // 13 is not present. 13 would have been inserted
+        // at position 4. So the function returns (-4-1) 
+        // which is -5.
+        index = Collections.binarySearch(al, 15);
+        System.out.println(index);
+    }
+}  
+```  
+```
+Output :
+3
+-5
+```  
+Searching an int key in a list sorted in descending order.  
+```
+// Java program to demonstrate working of Collections.
+// binarySearch() in an array sorted in descending order.
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class GFG
+{
+    public static void main(String[] args)
+    {
+        List al = new ArrayList();
+        al.add(100);
+        al.add(50);
+        al.add(30);
+        al.add(10);
+        al.add(2);
+
+        // The last parameter specifies the comparator method
+        // used for sorting.
+        int index = Collections.binarySearch(al, 50, 
+                                  Collections.reverseOrder());
+
+        System.out.println("Found at index " + index);
+    }
+}
+```  
+```
+Output :
+Found at index 1
+```  
+**Note:** Arrays.binarysearch() works for arrays which can be of primitive data type also. Collections.binarysearch() works for objects Collections like ArrayList and LinkedList.  
