@@ -28,4 +28,4 @@ This is a course designed by geeksforgeeks for Data Structures and Algorithms wh
 + Segment-Tree
 + Disjoint set
 
-All the problems and exercises associated with each of the topics are solved here.
+All the problems and exercises associated with each of the topics are solved here and also notes for them is covered in their respective READMEs.  
