@@ -1,3 +1,4 @@
+# Refer geeksforgeeks for this solution #
 {
 #Initial Template for Python 3
 import atexit
