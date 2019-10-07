@@ -1,7 +1,7 @@
 # DSA-GeeksClasses
 ## DSA-Self Paced With Doubt Assistance
 
-## About this course:  
+### About this course:  
 This is a course designed by geeksforgeeks for Data Structures and Algorithms which covers below contents:  
 + [Introduction - Analysis of Algorithms( Iterative and recursive).](Introduction)
 + [Mathematics](Mathematics) 
