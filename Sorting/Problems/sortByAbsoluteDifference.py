@@ -42,4 +42,6 @@ def sortAbs(a, n, k):
             diff_dict[a[i]] = []
             diff_dict[a[i]].append(abs(a[i]-k))
     result = sorted(diff_dict.items(),key=operator.itemgetter(1))
-    return [a for a,b in result]
+    res = []
+    [res.extend([a]*len(b)) for a,b in result]
+    return res
