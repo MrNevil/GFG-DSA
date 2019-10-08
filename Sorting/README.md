@@ -71,3 +71,41 @@ void insertionSort(int arr[], int n)
 }
 ```  
 **Time Complexity: O(N2), where N is the size of the array.**  
+
+## Bubble Sort  
+Bubble Sort is also an in-place sorting algorithm. This is the simplest sorting algorithm and it works on the principle that:
+In one iteration if we swap all adjacent elements of an array such that after swap the first element is less than the second element then at the end of the iteration, the first element of the array will be the minimum element.  
+
+Bubble-Sort algorithm simply repeats the above steps N-1 times, where N is the size of the array.
+
+Example: Consider the array, arr[] = {5, 1, 4, 2, 8}.
++ First Pass: ( 5 1 4 2 8 ) --> ( 1 5 4 2 8 ), Here, algorithm compares the first two elements, and swaps since 5 > 1.
+( 1 5 4 2 8 ) -->  ( 1 4 5 2 8 ), Swap since 5 > 4
+( 1 4 5 2 8 ) -->  ( 1 4 2 5 8 ), Swap since 5 > 2
+( 1 4 2 5 8 ) --> ( 1 4 2 5 8 ), Now, since these elements are already in order (8 > 5), algorithm does not swap them.  
++ Second Pass: ( 1 4 2 5 8 ) --> ( 1 4 2 5 8 )  
+( 1 4 2 5 8 ) --> ( 1 2 4 5 8 ), Swap since 4 > 2  
+( 1 2 4 5 8 ) --> ( 1 2 4 5 8 )  
+( 1 2 4 5 8 ) -->  ( 1 2 4 5 8 ) Now, the array is already sorted, but our algorithm does not know if it is completed. The algorithm needs one whole pass without any swap to know it is sorted.  
++ Third Pass: ( 1 2 4 5 8 ) --> ( 1 2 4 5 8 )
+( 1 2 4 5 8 ) --> ( 1 2 4 5 8 )
+( 1 2 4 5 8 ) --> ( 1 2 4 5 8 )
+( 1 2 4 5 8 ) --> ( 1 2 4 5 8 )  
+  
+### Function Implementation:  
+```
+// A function to implement bubble sort 
+void bubbleSort(int arr[], int n) 
+{ 
+   int i, j; 
+   for (i = 0; i < n-1; i++)       
+  
+       // Last i elements are already in place    
+       for (j = 0; j < n-i-1; j++)  
+           if (arr[j] > arr[j+1]) 
+              swap(&arr[j], &arr[j+1]); 
+} 
+```  
+**Note:** The above solution can be further optimized by keeping a flag to check if the array is already sorted in the first pass itself and to stop any further iteration.
+
+**Time Complexity: O(N2)**
