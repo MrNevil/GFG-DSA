@@ -10,7 +10,7 @@ This is a course designed by geeksforgeeks for Data Structures and Algorithms wh
 + [Arrays](Arrays)  
 + [Searching](Searching)  
 + [Sorting](Sorting)  
-+ Matrix
++ [Matrix](Matrix)
 + Hashing
 + Strings
 + LinkedList
