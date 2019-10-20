@@ -11,7 +11,7 @@ This is a course designed by geeksforgeeks for Data Structures and Algorithms wh
 + [Searching](Searching)  
 + [Sorting](Sorting)  
 + [Matrix](Matrix)
-+ Hashing
++ [Hashing](Hashing)
 + Strings
 + LinkedList
 + Stack
