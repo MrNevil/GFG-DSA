@@ -13,11 +13,11 @@ This is a course designed by geeksforgeeks for Data Structures and Algorithms wh
 + [Matrix](Matrix)
 + [Hashing](Hashing)
 + [Strings](Strings)
-+ LinkedList
-+ Stack
-+ Queue
-+ Tree
-+ Binary Search Tree
++ [LinkedList](LinkedList)
++ [Stack](Stack)
++ [Queue](Queue)
++ [Tree](Tree)
++ [Binary Search Tree](Binary-Search-Tree)
 + Heap
 + Graph
 + Greedy 
