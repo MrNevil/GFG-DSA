@@ -54,6 +54,7 @@ class Node:
         self.data=data
         self.next=None
 '''
+# Contributed by Vikas Chitturi
 # function should insert new node at the
 # beigning of the list
 def insertAtBegining(a,value):
